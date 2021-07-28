@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => (
     <div>
-        <h1>Campeões</h1>
+        <h1>Campeõess</h1>
     </div>
 );
 
