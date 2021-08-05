@@ -13,7 +13,7 @@ const Menu = () => (
           <a className="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Administração
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
