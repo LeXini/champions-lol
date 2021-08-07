@@ -49,6 +49,8 @@ export function register(config) {
         registerValidSW(swUrl, config);
       }
     });
+  }else{
+    console.log("Não conseguiu Registrar o service worker. NODE_ENV: " + process.env.NODE_ENV);
   }
 }
 
@@ -57,6 +59,7 @@ function registerValidSW(swUrl, config) {
     .register(swUrl)
     .then((registration) => {
       registration.onupdatefound = () => {
+        console.log("Service Worker foi registrado");
         const installingWorker = registration.installing;
         if (installingWorker == null) {
           return;
