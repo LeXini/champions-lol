@@ -6,7 +6,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Menu from './components/Menu';
-import Home from './components/Home';
 import Campeao from './components/campeao/Campeao';
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
     <Router>
       <Menu/>
       <Switch>
-        <Route exact path="/" render={Home}/>
+        <Route exact path="/" render={ () => <Campeao/>}/>
         <Route exact path="/campeoes" render={ () => <Campeao/>}/>
       </Switch>
     </Router>

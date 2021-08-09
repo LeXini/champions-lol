@@ -1,6 +1,7 @@
 import { Component } from "react";
 
 import Tabela from './Tabela';
+import TabelaHome from './TabelaHome';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Cadastrar from './Cadastrar'
 import SimpleStorage from "react-simple-storage"
@@ -43,14 +44,16 @@ class Campeao extends Component {
 
     render() {
         return (
-
             <Router>
-                <SimpleStorage parent={this}/>
+                <SimpleStorage parent={this} />
                 <Switch>
+                    <Route exact path="/"
+                        render={
+                            () => <TabelaHome listaObjetos={this.state.listaObjetos}/>
+                        } />
                     <Route exact path="/campeoes"
                         render={
-                            () => <Tabela listaObjetos={this.state.listaObjetos}
-                                remover={this.remover} />
+                            () => <Tabela listaObjetos={this.state.listaObjetos} remover={this.remover} />
                         } />
                     <Route exact path="/cadastrarcampeoes" render={() =>
                         <Cadastrar inserir={this.inserir}
@@ -66,7 +69,7 @@ class Campeao extends Component {
                                 <Cadastrar editar={this.editar} objeto={objeto} />
                             )
                         } else {
-                            return <Redirect to="/campeoes"/>
+                            return <Redirect to="/campeoes" />
                         }
                     }
                     } />
