@@ -41,7 +41,7 @@ class Cadastrar extends Component {
                     </div>
                     <div className="form-group">
                         <label for="txtNome">Nome</label>
-                        <input type="text" className="form-control" id="txtNome"
+                        <input type="text" minlength="1" maxlength="30" className="form-control" id="txtNome"
                             placeholder="Informe o nome do Campeão" 
                             defaultValue={this.props.objeto.nome}
                             value={this.state.objeto.nome}
@@ -54,7 +54,7 @@ class Cadastrar extends Component {
                     </div>   
                     <div className="form-group">
                         <label for="txtFuncao">Função</label>
-                        <input type="text" className="form-control" id="txtFuncao"
+                        <input type="text" minlength="1" maxlength="15" className="form-control" id="txtFuncao"
                             placeholder="Informe a função do Campeão" 
                             required
                             defaultValue={this.props.objeto.funcao}
@@ -67,7 +67,7 @@ class Cadastrar extends Component {
                     </div>  
                     <div className="form-group">
                         <label for="txtDificuldade">Dificuldade</label>
-                        <input type="number" className="form-control" id="txtDificuldade"
+                        <input type="text" minlength="1" maxlength="10" className="form-control" id="txtDificuldade"
                             placeholder="Informe a Dificuldade do Campeão"
                             required 
                             defaultValue={this.props.objeto.dificuldade}
