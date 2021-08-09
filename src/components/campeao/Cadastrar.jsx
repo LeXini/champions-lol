@@ -77,7 +77,8 @@ class Cadastrar extends Component {
                                     {objeto: {...this.state.objeto, dificuldade : e.target.value}}
                                 )
                             }/>
-                    </div>   
+                    </div>
+                    <br/> 
                     <button type="submit" className="btn btn-success">
                             Salvar <i className="bi bi-save"></i>
                     </button>                                                       
