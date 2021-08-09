@@ -53,11 +53,11 @@ class Campeao extends Component {
                         } />
                     <Route exact path="/campeoes"
                         render={
-                            () => <Tabela listaObjetos={this.state.listaObjetos} remover={this.remover} />
+                            () => <Tabela listaObjetos={this.state.listaObjetos} remover={this.remover}/>
                         } />
                     <Route exact path="/cadastrarcampeoes" render={() =>
                         <Cadastrar inserir={this.inserir}
-                            objeto={{ id: 0, nome: "", funcao: "", dificuldade: "" }} sequence={this.state.sequenciacodigo}/>
+                            objeto={{ id: 0, nome: "", funcao: "", dificuldade: "" }} validate={Number(0)} sequence={this.state.sequenciacodigo}/>
                     } />
                     <Route exact path="/editarcampeao/:id" render={props => {
                         console.log("ID recibido: " + props.match.params.id);
@@ -66,7 +66,7 @@ class Campeao extends Component {
                         );
                         if (objeto) {
                             return (
-                                <Cadastrar editar={this.editar} objeto={objeto} />
+                                <Cadastrar editar={this.editar} objeto={objeto} validate={Number(1)}/>
                             )
                         } else {
                             return <Redirect to="/campeoes" />

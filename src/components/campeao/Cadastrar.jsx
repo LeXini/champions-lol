@@ -32,13 +32,22 @@ class Cadastrar extends Component {
             <div style={{ padding: '20px' }}>
                 <h2>Edição de Campeão</h2>
                 <form id="formulario" onSubmit={this.acaoCadastrar}>
+                    {this.props.validate === 0 && (
                     <div className="form-group">
                         <label for="txtId">ID</label>
                         <input type="number" className="form-control" id="txtId"                            
                             defaultValue={Number(this.props.sequence)+1}
                             value={this.state.sequence}
                             readOnly/>
-                    </div>
+                    </div>)}
+                    {this.props.validate === 1 && (
+                    <div className="form-group">
+                        <label for="txtId">ID</label>
+                        <input type="number" className="form-control" id="txtId"                            
+                            defaultValue={this.props.objeto.id}
+                            value={this.state.objeto.id}
+                            readOnly/>
+                    </div>)}
                     <div className="form-group">
                         <label for="txtNome">Nome</label>
                         <input type="text" minlength="1" maxlength="30" className="form-control" id="txtNome"
