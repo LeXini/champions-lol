@@ -35,8 +35,8 @@ class Cadastrar extends Component {
                     <div className="form-group">
                         <label for="txtId">ID</label>
                         <input type="number" className="form-control" id="txtId"                            
-                            defaultValue={this.props.objeto.id}
-                            value={this.state.objeto.id}
+                            defaultValue={Number(this.props.sequence)+1}
+                            value={this.state.sequence}
                             readOnly/>
                     </div>
                     <div className="form-group">

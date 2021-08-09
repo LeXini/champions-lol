@@ -57,7 +57,7 @@ class Campeao extends Component {
                         } />
                     <Route exact path="/cadastrarcampeoes" render={() =>
                         <Cadastrar inserir={this.inserir}
-                            objeto={{ id: 0, nome: "", funcao: "", dificuldade: "" }} />
+                            objeto={{ id: 0, nome: "", funcao: "", dificuldade: "" }} sequence={this.state.sequenciacodigo}/>
                     } />
                     <Route exact path="/editarcampeao/:id" render={props => {
                         console.log("ID recibido: " + props.match.params.id);
